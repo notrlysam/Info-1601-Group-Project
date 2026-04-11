@@ -24,6 +24,14 @@ Done by:
 
 - Shivesh Maharaj (Lead):
 
+I coordinated the overall development of the project by organizing team meetings, defining the project scope, and ensuring that all members stayed on track with their assigned tasks. I was responsible for monitoring progress and verifying that each team member contributed to the GitHub repository.
+
+Additionally, I assisted in integrating various components of the application, ensuring smooth interaction between the frontend, API, and database. I contributed to testing and debugging to resolve issues and improve application stability.
+
+Finally, I was responsible for completing the project report, while ensuring that all requirements were met before submission.
+
+
+
 - Sameer Ali (DevOps):
 
 I set up a GitHub repository and initialized the project codebase, including the main pages: index.html, dashboard.html, and login.html. I structured the project with separate folders for CSS and JavaScript, containing styles.css and app.js respectively.
