@@ -1,0 +1,377 @@
+/* ============================================================
+   KNS Cocktails — Comments & Ratings Stylesheet
+   File: kns-comments.css
+   ============================================================ */
+
+/* ── Variables (matches your app palette) ── */
+:root {
+  --kns-bg:      #0d0f1a;
+  --kns-card:    #161824;
+  --kns-navy:    #1e2135;
+  --kns-border:  #2a2d40;
+  --kns-accent:  #c9a84c;
+  --kns-gold:    #e8c96a;
+  --kns-cream:   #f0ece0;
+  --kns-grey:    #9b9b8e;
+  --kns-radius:  10px;
+  --kns-shadow:  0 4px 24px rgba(0,0,0,0.35);
+}
+
+/* ── Section wrapper ── */
+.kns-community-section {
+  margin: 3rem 0;
+  padding: 0;
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+}
+
+.kns-section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--kns-border);
+  padding-bottom: 0.75rem;
+}
+.kns-section-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--kns-cream);
+  margin: 0;
+}
+.kns-section-subtitle {
+  font-size: 0.8rem;
+  color: var(--kns-accent);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ── Ratings row ── */
+.kns-ratings-row {
+  display: flex;
+  gap: 0;
+  background: var(--kns-card);
+  border: 1px solid var(--kns-border);
+  border-radius: var(--kns-radius);
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: var(--kns-shadow);
+}
+
+.kns-avg-block,
+.kns-rate-block {
+  flex: 1;
+  padding: 1.25rem 1.5rem;
+}
+
+.kns-divider-v {
+  width: 1px;
+  background: var(--kns-border);
+  margin: 0.75rem 0;
+}
+
+.kns-block-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--kns-grey);
+  margin: 0 0 0.6rem;
+  text-transform: uppercase;
+}
+
+/* ── Average display ── */
+.kns-avg-display {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.kns-avg-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--kns-accent);
+  line-height: 1;
+  font-family: 'Playfair Display', Georgia, serif;
+}
+.kns-avg-stars {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+.kns-avg-count {
+  font-size: 0.8rem;
+  color: var(--kns-grey);
+}
+.kns-no-ratings,
+.kns-login-prompt {
+  font-size: 0.88rem;
+  color: var(--kns-grey);
+  margin: 0;
+}
+.kns-login-prompt a,
+.kns-login-banner a {
+  color: var(--kns-accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+.kns-login-prompt a:hover,
+.kns-login-banner a:hover { text-decoration: underline; }
+
+/* ── Star picker ── */
+.kns-star-picker {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.kns-star-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.15s ease;
+  border-radius: 4px;
+}
+.kns-star-btn:hover,
+.kns-star-btn.active { transform: scale(1.15); }
+.kns-your-rating {
+  font-size: 0.78rem;
+  color: var(--kns-grey);
+  margin-left: 6px;
+}
+
+/* ── Comments block ── */
+.kns-comments-block {
+  background: var(--kns-card);
+  border: 1px solid var(--kns-border);
+  border-radius: var(--kns-radius);
+  overflow: hidden;
+  box-shadow: var(--kns-shadow);
+}
+
+.kns-comments-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--kns-border);
+}
+.kns-comments-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--kns-cream);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.kns-count-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--kns-accent);
+  color: var(--kns-bg);
+  font-size: 0.72rem;
+  font-weight: 800;
+  min-width: 1.4rem;
+  height: 1.4rem;
+  padding: 0 0.35rem;
+  border-radius: 99px;
+}
+
+/* ── Add comment form ── */
+.kns-add-comment {
+  display: flex;
+  gap: 0.85rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--kns-border);
+  background: var(--kns-navy);
+  align-items: flex-start;
+}
+
+.kns-comment-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--kns-accent);
+  color: var(--kns-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.kns-comment-input-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#kns-comment-input {
+  background: var(--kns-border);
+  border: 1px solid var(--kns-border);
+  border-radius: 8px;
+  color: var(--kns-cream);
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+  font-size: 0.9rem;
+  padding: 0.65rem 0.85rem;
+  resize: vertical;
+  min-height: 72px;
+  transition: border-color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+#kns-comment-input:focus {
+  outline: none;
+  border-color: var(--kns-accent);
+  background: #1e2135;
+}
+#kns-comment-input::placeholder { color: var(--kns-grey); }
+
+.kns-input-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kns-char-count {
+  font-size: 0.75rem;
+  color: var(--kns-grey);
+}
+
+.kns-submit-btn {
+  background: var(--kns-accent);
+  color: var(--kns-bg);
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.45rem 1.1rem;
+  cursor: pointer;
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+  transition: background 0.2s, transform 0.1s;
+  letter-spacing: 0.01em;
+}
+.kns-submit-btn:hover:not(:disabled) {
+  background: var(--kns-gold);
+  transform: translateY(-1px);
+}
+.kns-submit-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ── Login banner ── */
+.kns-login-banner {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--kns-border);
+  font-size: 0.88rem;
+  color: var(--kns-grey);
+  background: var(--kns-navy);
+}
+
+/* ── Comments list ── */
+.kns-comments-list {
+  padding: 0.5rem 0;
+  max-height: 480px;
+  overflow-y: auto;
+}
+.kns-comments-list::-webkit-scrollbar { width: 4px; }
+.kns-comments-list::-webkit-scrollbar-track { background: transparent; }
+.kns-comments-list::-webkit-scrollbar-thumb { background: var(--kns-border); border-radius: 2px; }
+
+.kns-no-comments {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: var(--kns-grey);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.kns-comment-card {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--kns-border);
+  transition: background 0.15s;
+}
+.kns-comment-card:last-child { border-bottom: none; }
+.kns-comment-card:hover { background: var(--kns-navy); }
+
+.kns-comment-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.55rem;
+}
+.kns-comment-meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.kns-comment-user {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--kns-cream);
+}
+.kns-comment-time {
+  font-size: 0.74rem;
+  color: var(--kns-grey);
+}
+.kns-comment-text {
+  font-size: 0.9rem;
+  color: var(--kns-grey);
+  margin: 0;
+  line-height: 1.55;
+  padding-left: calc(36px + 0.65rem);
+}
+
+.kns-delete-btn {
+  background: none;
+  border: none;
+  color: var(--kns-grey);
+  cursor: pointer;
+  font-size: 0.75rem;
+  padding: 4px 6px;
+  border-radius: 4px;
+  line-height: 1;
+  transition: color 0.15s, background 0.15s;
+}
+.kns-delete-btn:hover {
+  color: #e05c5c;
+  background: rgba(224,92,92,0.1);
+}
+
+/* ── Toast ── */
+#kns-toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: var(--kns-accent);
+  color: var(--kns-bg);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: 99px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+  pointer-events: none;
+  z-index: 9999;
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+}
+#kns-toast.kns-toast-show {
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .kns-ratings-row { flex-direction: column; }
+  .kns-divider-v { width: auto; height: 1px; margin: 0 0.75rem; }
+  .kns-add-comment { flex-direction: column; }
+  .kns-comment-avatar.kns-my-avatar { display: none; }
+}
