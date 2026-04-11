@@ -25,3 +25,13 @@ Done by:
 - Shivesh Maharaj (Lead):
 
 - Sameer Ali (DevOps):
+
+I set up a GitHub repository and initialized the project codebase, including the main pages: index.html, dashboard.html, and login.html. I structured the project with separate folders for CSS and JavaScript, containing styles.css and app.js respectively.
+
+I implemented Progressive Web App (PWA) functionality by creating a manifest.json file and configuring a service worker to enable offline support through caching of core application files.
+
+I updated index.html and app.js to correctly link and register both the service worker and manifest file, ensuring proper PWA installation and functionality across supported devices.
+
+Throughout development, I carried out testing and debugging to resolve issues related to caching behavior and service worker registration, improving overall stability and performance.
+
+Finally, I deployed the application using Firebase Hosting, enabling secure HTTPS access and making the web application publicly accessible as an installable progressive web app.
