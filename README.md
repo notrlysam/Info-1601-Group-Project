@@ -38,8 +38,6 @@ Additionally, I assisted in implementing various components of the application, 
 
 Finally, I was responsible for completing the full project report and ensuring that all requirements were met before submission.
 
-
-
 - Sameer Ali (DevOps):
 
 I set up a GitHub repository and initialized the project codebase, including the main pages: index.html, dashboard.html, and login.html. I structured the project with separate folders for CSS and JavaScript, containing styles.css and app.js respectively.
